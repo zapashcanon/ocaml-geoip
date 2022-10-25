@@ -47,8 +47,8 @@ external setup_custom_directory : string -> unit
 external is_db_avail : db_type -> bool
 	= "camlidl_geoip_GeoIP_db_avail"
 
-(** Open GeoIP database specified by [path] if given, 
-otherwise open database by [db_type] if given, otherwise open default database. 
+(** Open GeoIP database specified by [path] if given,
+otherwise open database by [db_type] if given, otherwise open default database.
 @raise Failure if database cannot be opened *)
 val init_exn : ?path:string -> ?db:db_type -> flags -> t
 
@@ -129,4 +129,3 @@ external charset : t -> charset
 
 external set_charset : t -> charset -> charset
 	= "camlidl_geoip_GeoIP_set_charset"
-

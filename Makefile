@@ -10,7 +10,7 @@ doc:
 	dune build @doc
 
 example:
-	dune exec -- ./example.exe
+	dune exec -- example/example.exe
 
 .PHONY: gen
 

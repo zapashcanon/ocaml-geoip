@@ -1,4 +1,3 @@
-
 open Printf
 open Geoip
 
@@ -28,7 +27,7 @@ let test1 () =
   test gi;
   close gi
 
-let interactive () = 
+let interactive () =
   let gi = init_exn GEOIP_MEMORY_CACHE in
   let rec loop () =
     match input_line stdin with
@@ -49,8 +48,7 @@ let test2 () =
     (show (country_name_by_addr db "1.0.0.1"));
   close db
 
-let () = 
+let () =
   test1 ();
   test2 ();
   interactive ()
-
